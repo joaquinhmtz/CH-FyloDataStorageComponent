@@ -1,0 +1,232 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 14px;
+	font-family: 'Raleway', sans-serif;
+	background-image: url(../../images/bg-mobile.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	@include md {
+		background-color: var(--veryDarkBlue);
+		background-image: url(./../images/bg-desktop.png);
+		background-position: 0% 100%;
+		background-repeat: no-repeat;
+		background-size: 100% 50%, cover;
+		display: flex;
+        flex-direction: column;
+	}
+}
+
+.container {
+	display: flex;
+	width: 100%;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	padding: 25px;
+	background-color: transparent;
+
+	.fylo-content {
+		width: 100%;
+		height: 70%;
+		display: block;
+		background-color: transparent;
+
+		@include md {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.fylo_sub {
+			width: 100%;
+			height: 50%;
+
+			&.primary {
+				background-color: var(--darkBlue);
+				margin-bottom: 15px;
+    			margin-top: -5px;
+    			border-radius: 10px 100px 10px 10px;
+    			padding: 35px;
+
+    			@include md {
+    				width: 350px;
+					height: 200px;
+					margin-bottom: 0;
+					margin-top: 0;
+					margin-right: 25px;
+    			}
+
+    			.container-buttons {
+    				display: flex;
+    				padding-top: 30px;
+    				//padding-top: 60px;
+
+    				.fylo-btn {
+    					align-items: center;
+    					width: 50px;
+    					height: 50px;
+    					border: none;
+    					border-radius: 8px;
+    					margin-right: 15px;
+    					background-color: var(--veryDarkBlue);
+    					border-color: var(--veryDarkBlue);
+
+    					img {
+    						width: 1.5rem;
+
+    						&.doc {
+    							width: 1.3rem;
+    						}
+
+    						&.folder {
+    							width: 1.6rem;
+    						}
+
+    						&.upload {
+    							width: 1.6rem;
+    						}
+    					}
+    				}
+    			}
+			}
+
+			&.secondary {
+				height: 45%;
+				background-color: var(--darkBlue);
+				border-radius: 10px 10px 10px 10px;
+				padding: 35px;
+				margin-top: 15px;
+
+				@include md {
+					width: 540px;
+					height: 35%;
+					margin-top: 40px;
+				}
+
+				p {
+					color: white;
+					text-align: center;
+    				font-weight: 100;
+
+    				@include md {
+    					text-align: left;
+    				}
+
+    				span {
+    					font-weight: 700;
+    				}
+				}
+
+				.storage {
+					width: 100%;
+					height: 20px;
+					background-color: var(--veryDarkBlue);
+					margin-top: 15px;
+					display: flex;
+					align-items: center;
+					border-radius: 15px;
+					padding-left: 3px;
+
+					.storage_range {
+						width: 75%;
+						height: 15px;
+						border-radius: 15px;
+						background: linear-gradient(#ffa399, #ff4d97);
+						display: flex;
+  						justify-content: flex-end;
+  						align-items: center;
+						padding: 2px 2px 3px 2px; 
+
+						@include md {
+							margin-top: 0;
+						}
+
+						.range {
+							width: 11px;
+							height: 11px;
+							background-color: var(--white);
+							border-radius: 10px;
+
+							@include md {
+								margin-top: 1px;
+							}
+						}
+					}
+				}
+
+				.storage_rest {
+					margin-top: 15px;
+				    color: var(--white);
+				    font-weight: 700;
+				    display: flex;
+				    justify-content: space-between;
+				}
+			}
+
+			&.third {
+				height: 70px;
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background-color: transparent;
+
+				@include md {
+					position: absolute;
+					width: 66%;
+					justify-content: flex-end;
+				}
+
+				.fylo_sub_content_third {
+					width: 50%;
+					height: 70px;
+					background-color: var(--white);
+					border-radius: 10px 10px 10px 10px;
+					position: absolute;
+					top: calc(100% - 25%);
+					display: flex;
+    				justify-content: center;
+    				align-items: center;
+
+    				@include md {
+    					width: 180px;
+    					top: calc(100% - 130px);
+    					left: calc(100% - 22%);
+    				}
+
+    				.numbGB {
+    					font-weight: 700;
+    					color: var(--black);
+    					font-size: 2.5rem;
+    					margin-right: 10px;
+    				}
+
+    				.textGB {
+    					text-transform: uppercase;
+    					color: var(--grayishBlue);
+    					font-weight: 700;
+    					font-size: .8rem;
+    				}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.fylo_sub_content_third::after {
+		content: '';
+		top: 61px;
+		left: 160px;
+		border-left:20px solid transparent;
+		border-right:0px solid transparent;
+		border-top: 27px solid #fff;
+		position: absolute;
+	}
+}

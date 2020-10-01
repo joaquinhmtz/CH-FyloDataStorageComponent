@@ -1,0 +1,231 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  font-family: "Raleway", sans-serif;
+  background-image: url(../../images/bg-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (min-width: 900px) {
+  body {
+    background-color: var(--veryDarkBlue);
+    background-image: url(./../images/bg-desktop.png);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 50%, cover;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  background-color: transparent;
+}
+.container .fylo-content {
+  width: 100%;
+  height: 70%;
+  display: block;
+  background-color: transparent;
+}
+@media screen and (min-width: 900px) {
+  .container .fylo-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.container .fylo-content .fylo_sub {
+  width: 100%;
+  height: 50%;
+}
+.container .fylo-content .fylo_sub.primary {
+  background-color: var(--darkBlue);
+  margin-bottom: 15px;
+  margin-top: -5px;
+  border-radius: 10px 100px 10px 10px;
+  padding: 35px;
+}
+@media screen and (min-width: 900px) {
+  .container .fylo-content .fylo_sub.primary {
+    width: 350px;
+    height: 200px;
+    margin-bottom: 0;
+    margin-top: 0;
+    margin-right: 25px;
+  }
+}
+.container .fylo-content .fylo_sub.primary .container-buttons {
+  display: flex;
+  padding-top: 30px;
+}
+.container .fylo-content .fylo_sub.primary .container-buttons .fylo-btn {
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 8px;
+  margin-right: 15px;
+  background-color: var(--veryDarkBlue);
+  border-color: var(--veryDarkBlue);
+}
+.container .fylo-content .fylo_sub.primary .container-buttons .fylo-btn img {
+  width: 1.5rem;
+}
+.container .fylo-content .fylo_sub.primary .container-buttons .fylo-btn img.doc {
+  width: 1.3rem;
+}
+.container .fylo-content .fylo_sub.primary .container-buttons .fylo-btn img.folder {
+  width: 1.6rem;
+}
+.container .fylo-content .fylo_sub.primary .container-buttons .fylo-btn img.upload {
+  width: 1.6rem;
+}
+.container .fylo-content .fylo_sub.secondary {
+  height: 45%;
+  background-color: var(--darkBlue);
+  border-radius: 10px 10px 10px 10px;
+  padding: 35px;
+  margin-top: 15px;
+}
+@media screen and (min-width: 900px) {
+  .container .fylo-content .fylo_sub.secondary {
+    width: 540px;
+    height: 35%;
+    margin-top: 40px;
+  }
+}
+.container .fylo-content .fylo_sub.secondary p {
+  color: white;
+  text-align: center;
+  font-weight: 100;
+}
+@media screen and (min-width: 900px) {
+  .container .fylo-content .fylo_sub.secondary p {
+    text-align: left;
+  }
+}
+.container .fylo-content .fylo_sub.secondary p span {
+  font-weight: 700;
+}
+.container .fylo-content .fylo_sub.secondary .storage {
+  width: 100%;
+  height: 20px;
+  background-color: var(--veryDarkBlue);
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  padding-left: 3px;
+}
+.container .fylo-content .fylo_sub.secondary .storage .storage_range {
+  width: 75%;
+  height: 15px;
+  border-radius: 15px;
+  background: linear-gradient(#ffa399, #ff4d97);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 2px 2px 3px 2px;
+}
+@media screen and (min-width: 900px) {
+  .container .fylo-content .fylo_sub.secondary .storage .storage_range {
+    margin-top: 0;
+  }
+}
+.container .fylo-content .fylo_sub.secondary .storage .storage_range .range {
+  width: 11px;
+  height: 11px;
+  background-color: var(--white);
+  border-radius: 10px;
+}
+@media screen and (min-width: 900px) {
+  .container .fylo-content .fylo_sub.secondary .storage .storage_range .range {
+    margin-top: 1px;
+  }
+}
+.container .fylo-content .fylo_sub.secondary .storage_rest {
+  margin-top: 15px;
+  color: var(--white);
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+}
+.container .fylo-content .fylo_sub.third {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+@media screen and (min-width: 900px) {
+  .container .fylo-content .fylo_sub.third {
+    position: absolute;
+    width: 66%;
+    justify-content: flex-end;
+  }
+}
+.container .fylo-content .fylo_sub.third .fylo_sub_content_third {
+  width: 50%;
+  height: 70px;
+  background-color: var(--white);
+  border-radius: 10px 10px 10px 10px;
+  position: absolute;
+  top: calc(100% - 25%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 900px) {
+  .container .fylo-content .fylo_sub.third .fylo_sub_content_third {
+    width: 180px;
+    top: calc(100% - 130px);
+    left: calc(100% - 22%);
+  }
+}
+.container .fylo-content .fylo_sub.third .fylo_sub_content_third .numbGB {
+  font-weight: 700;
+  color: var(--black);
+  font-size: 2.5rem;
+  margin-right: 10px;
+}
+.container .fylo-content .fylo_sub.third .fylo_sub_content_third .textGB {
+  text-transform: uppercase;
+  color: var(--grayishBlue);
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+@media screen and (min-width: 900px) {
+  .fylo_sub_content_third::after {
+    content: "";
+    top: 61px;
+    left: 160px;
+    border-left: 20px solid transparent;
+    border-right: 0px solid transparent;
+    border-top: 27px solid #fff;
+    position: absolute;
+  }
+}
+:root {
+  --gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+  --paleBlue: hsl(243, 100%, 93%);
+  --grayishBlue: hsl(229, 7%, 55%);
+  --darkBlue: hsl(228, 56%, 26%);
+  --veryDarkBlue: hsl(229, 57%, 11%);
+  --white: #fff;
+  --black: #000;
+}
+
+/*# sourceMappingURL=app.css.map */

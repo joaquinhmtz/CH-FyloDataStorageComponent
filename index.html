@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./static/css/app.css">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  
+  <title>Fylo data storage component</title>
+</head>
+<body>
+  <div class="container">
+    <div class="fylo-content">
+      <div class="fylo_sub primary">
+        <img src="./images/logo.svg" alt="Logo Fylo">
+        <div class="container-buttons">
+          <button class="fylo-btn">
+            <img class="doc" src="./images/icon-document.svg" alt="Icon Document">
+          </button>
+          <button class="fylo-btn">
+            <img class="folder" src="./images/icon-folder.svg" alt="Icon Folder">
+          </button>
+          <button class="fylo-btn">
+            <img class="upload" src="./images/icon-upload.svg" alt="Icon Upload">
+          </button>
+        </div>
+      </div>
+      <div class="fylo_sub secondary">
+        <p>You´ve used <span>815 GB</span> of your storage</p>
+        <div class="storage">
+          <div class="storage_range">
+            <div class="range"></div>
+          </div>
+        </div>
+        <div class="storage_rest">
+          <span>0 GB</span><span>1000GB</span>
+        </div>
+      </div>
+      <div class="fylo_sub third">
+        <div class="fylo_sub_content_third">
+          <span class="numbGB">185</span> <span class="textGB"> GB Left</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
